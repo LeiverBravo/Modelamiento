@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Método congruencial multiplicativo
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <br><br><br><br><br><br>
+    <legend class="text-center header">Método congruencial multiplicativo</legend><br>
+    <p style="color: #000;">
+        Este algoritmo genera números pseudoaleatorios y tiene como base el uso del algoritmo congruencial lineal, con la única diferencia que conlleva una operación menos.
+    </p>
+    <div class="card">
+        <form method="POST" action="{{url_for('calcularCongruencialMultiplicativo')}}"><br>
+            <div class="container">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Número iteraciones (n)</label>
+                        <input name="numeroIteraciones" type="number" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Semilla (X0)</label>
+                        <input name="semilla" type="number" class="form-control" id="validationDefault02" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Multiplicador (a)</label>
+                        <input name="multiplicador" type="number" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Módulo (m)</label>
+                        <input name="modulo" type="number" class="form-control" id="validationDefault01" required>
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">Calcular</button>
+            </div>
+        </form><br>
+    </div>
+</div><br><br><br><br><br><br><br>
+{% endblock %}

@@ -1,0 +1,45 @@
+h1{
+    text-align: center;
+    font-weight: bolder;
+    color: blue;
+}
+h2{
+    text-align: center;
+    font-weight: bolder;
+    color: blue;
+}
+p{
+    justify-content: center;
+    text-align: center;
+}
+.producto-img img {
+    height: 100%;
+    max-width: 500px;
+    margin-top: 3rem;
+    object-fit: cover;
+    object-position: center center;
+}
+img, svg {
+    vertical-align: middle;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+.centrar {
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+    color: blue;
+}
+
+h5{
+    text-align: center;
+}
+h6{
+    text-align: center;
+}
+span{
+	text-align: center;
+}

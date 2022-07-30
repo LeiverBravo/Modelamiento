@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Método de los cuadrados medios
+{% endblock %}
+
+{% block content %}
+
+<div class="container">
+    <br><br><br><br><br><br>
+    <legend class="text-center header">Método de los cuadrados medios</legend><br>
+    <p style="color: #000;">
+        Mediante este procedimiento se generan números pseudoaleatorios de cuatro dígitos
+        en donde se puede escoger un número como semilla y la cantidad de 
+        iteraciones generadoras de números pseudoaleatorios.
+    </p>
+    <div class="card">
+        <form method="POST" action="{{url_for('calcularCuadradosMedios')}}"><br>
+            <div class="col-sm-12">
+                <div class="form-row">
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault01">Número iteraciones (n)</label>
+                        <input name="numeroIteraciones" type="number" class="form-control" id="validationDefault01"
+                            required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault02">Semilla (X0)</label>
+                        <input name="semilla" type="number" class="form-control" id="validationDefault02" required>
+                    </div>
+                </div>
+                <button class="btn btn-success" type="submit">Calcular</button>
+            </div>
+        </form><br>
+    </div>
+</div><br><br><br><br><br><br><br>
+{% endblock %}
